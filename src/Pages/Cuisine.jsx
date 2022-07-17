@@ -17,7 +17,7 @@ function Cuisine() {
   }; 
 
   useEffect(() => {
-    getCuisine('params.type');
+    getCuisine(params.type);
     console.log(params.type);
   }, [params.type]);
   
@@ -26,7 +26,7 @@ function Cuisine() {
       {cuisine.map((item) => {
         return (
           <Card key={item.id}>
-              <img src="{item.image}" alt=""/>
+              <img src={item.image} alt=""/>
               <h3>{item.title}</h3>
             </Card>
         )
