@@ -3,14 +3,18 @@
 import styled from "styled-components";
 import {useState} from "react";
 import {BiSearch} from "react-icons/bi";
+import {useNavigate} from "react-router-dom";
 
 function Search() {
 
   const [input, setInput] = useState("");
+  const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
-  }
+    navigate(`/searched/${input}`);
+  };
+
   return (
     <FormStyle onSubmit={submitHandler}>
       <div className="search-icon">
@@ -79,4 +83,4 @@ const FormStyle = styled.div`
 
 `;
 
-export default Search
+export default Search;
