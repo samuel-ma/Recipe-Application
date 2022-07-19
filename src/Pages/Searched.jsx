@@ -32,6 +32,7 @@ function Searched() {
       })}
     </Grid>
   )
+}
 
 const Grid = styled.div`
   display: grid;
@@ -55,4 +56,4 @@ const Card = styled.div`
   }
 `;
 
-export default Searched
+export default Searched;
