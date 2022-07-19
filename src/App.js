@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-          <h1>Hello World</h1>
           <Search />
           <Category />
           <Pages />

@@ -5,14 +5,20 @@ import {useState} from "react";
 import {BiSearch} from "react-icons/bi";
 
 function Search() {
+
+  const [input, setInput] = useState("");
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+  }
   return (
-    <FormStyle>
+    <FormStyle onSubmit={submitHandler}>
       <div className="search-icon">
         <BiSearch className="search" />
       </div>
 
       <div className="input-div">
-        <input type="text" />
+        <input onChange={(e) => setInput(e.target.vlaue)}  type="text"  value={input}/>
       </div>
       
     </FormStyle>
